@@ -9,6 +9,7 @@ const PageTitle = ({ line }) => {
     return (
         <div
             className="page-title text-capitalize display-6 mb-3"
+            style={{ fontSize: '1.4em' }}
             dangerouslySetInnerHTML={{ __html: displayText }}>
         </div>
     );

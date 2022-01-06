@@ -29,7 +29,7 @@ const Line = ({ text, lineType }) => {
                 return <Code line={line} />;
 
             default:
-                return <div dangerouslySetInnerHTML={{ __html: line }}></div>;
+                return <div dangerouslySetInnerHTML={{ __html: line }} style={{ fontSize: '1em' }}></div>;
 
         }
     };

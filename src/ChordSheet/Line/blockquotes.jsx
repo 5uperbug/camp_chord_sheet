@@ -5,7 +5,7 @@ const Blockquotes = ({ line }) => {
     return (
         <blockquote
             className="blockquote bg-secondary text-white px-2 py-1 m-0"
-            style={{ fontSize: '0.9rem' }}
+            style={{ fontSize: '0.9em' }}
             dangerouslySetInnerHTML={{ __html: displayText }}>
         </blockquote>
     );

@@ -80,7 +80,10 @@ class ChordSheet extends React.Component {
                 <Container>
                     <Row>
                         <Col>
-                            <div style={{ whiteSpace: 'pre-wrap' }} className="font-monospace">
+                            <div
+                                style={{ whiteSpace: 'pre-wrap', fontSize: this.props.fontSize }}
+                                className="font-monospace"
+                            >
                                 {this.renderLines(data)}
                             </div>
                         </Col>

@@ -6,6 +6,7 @@ import ChordSheet from "../ChordSheet";
 const SongIndex = ({ list }) => {
     const [selectedSong, setSelectedSong] = useState(null);
     const [show, setShow] = useState(false);
+    const [fontSize, setFontSize] = useState(16);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
@@ -42,13 +43,21 @@ const SongIndex = ({ list }) => {
 
                     <Modal show={show} onHide={handleClose} fullscreen>
                         <Modal.Header closeButton>
-                            <Modal.Title className="text-center text-capitalize w-100">{selectedSong && selectedSong.name}</Modal.Title>
+                            <Modal.Title
+                                className="text-center text-capitalize w-100"
+                            >
+                                {selectedSong && selectedSong.name}
+                            </Modal.Title>
                         </Modal.Header>
-                        <Modal.Body>{selectedSong && <ChordSheet filename={selectedSong.filename} />}</Modal.Body>
+                        <Modal.Body>
+                            {selectedSong && <ChordSheet filename={selectedSong.filename} fontSize={fontSize} />}
+                        </Modal.Body>
                         <Modal.Footer>
-                            <Button variant="secondary" onClick={handleClose}>
-                                Close
-                            </Button>
+                            <div className="btn-group" role="group">
+                                <button type="button" className="btn btn-dark" onClick={() => setFontSize(fontSize - 1)}>-</button>
+                                <button type="button" className="btn btn-dark" style={{ pointerEvents: 'none' }}>FONT</button>
+                                <button type="button" className="btn btn-dark" onClick={() => setFontSize(fontSize + 1)}>+</button>
+                            </div>
                         </Modal.Footer>
                     </Modal>
                 </Col>
