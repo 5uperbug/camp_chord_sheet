@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Container, Row, Col, Modal, Button } from "react-bootstrap";
+import { Container, Row, Col, Modal } from "react-bootstrap";
 
 import ChordSheet from "../ChordSheet";
 
