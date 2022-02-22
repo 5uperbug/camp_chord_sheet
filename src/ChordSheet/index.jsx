@@ -46,6 +46,7 @@ class ChordSheet extends React.Component {
                 text={line}
                 key={index}
                 lineType={lineType}
+                transposeOffset={this.props.transposeOffset}
             />;
         });
 

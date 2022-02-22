@@ -14,7 +14,7 @@ import Chords from "./Chords";
 import Blockquotes from "./blockquotes";
 import Code from "./Code";
 
-const Line = ({ text, lineType }) => {
+const Line = ({ text, lineType, transposeOffset }) => {
     const printLine = (line) => {
         switch (lineType) {
             case SECTION_TITLE:
@@ -22,7 +22,7 @@ const Line = ({ text, lineType }) => {
             case PAGE_TITLE:
                 return <PageTitle line={line} />;
             case CHORDS:
-                return <Chords line={line} />;
+                return <Chords line={line} transposeOffset={transposeOffset} />;
             case BLOCKQUOTES:
                 return <Blockquotes line={line} />;
             case CODE:

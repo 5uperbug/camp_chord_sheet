@@ -7,13 +7,15 @@ const SongIndex = ({ list }) => {
     const [selectedSong, setSelectedSong] = useState(null);
     const [show, setShow] = useState(false);
     const [fontSize, setFontSize] = useState(16);
+    const [transposeOffset, setTransposeOffset] = useState(0);
+
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
     const showSong = (song) => {
         setSelectedSong(song);
         handleShow();
-    }
+    };
 
     const renderSongs = (songs) => {
         return songs.map((song, index) => (
@@ -26,7 +28,11 @@ const SongIndex = ({ list }) => {
                 {index + 1}. {song.name}
             </li>
         ));
-    }
+    };
+
+    const handleTranspose = (offset) => {
+        setTransposeOffset(offset % 12);
+    };
 
     return (
         <Container>
@@ -50,9 +56,24 @@ const SongIndex = ({ list }) => {
                             </Modal.Title>
                         </Modal.Header>
                         <Modal.Body>
-                            {selectedSong && <ChordSheet filename={selectedSong.filename} fontSize={fontSize} />}
+                            {
+                                selectedSong &&
+                                <ChordSheet
+                                    filename={selectedSong.filename}
+                                    fontSize={fontSize}
+                                    transposeOffset={transposeOffset}
+                                />
+                            }
                         </Modal.Body>
-                        <Modal.Footer>
+                        <Modal.Footer className="justify-content-between">
+                            <div className="btn-group" role="group">
+                                <button type="button" className="btn btn-dark" onClick={() => handleTranspose(transposeOffset - 1)}>-</button>
+                                <button type="button" className="btn btn-dark" style={{ pointerEvents: 'none' }}>
+                                    TRANSPOSE&nbsp;
+                                    {transposeOffset !== 0 && <sup>[{transposeOffset}]</sup>}
+                                </button>
+                                <button type="button" className="btn btn-dark" onClick={() => handleTranspose(transposeOffset + 1)}>+</button>
+                            </div>
                             <div className="btn-group" role="group">
                                 <button type="button" className="btn btn-dark" onClick={() => setFontSize(fontSize - 1)}>-</button>
                                 <button type="button" className="btn btn-dark" style={{ pointerEvents: 'none' }}>FONT</button>

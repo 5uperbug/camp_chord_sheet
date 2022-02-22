@@ -42,5 +42,9 @@
     {
         "name": "All hail the power",
         "filename": "11-all_hail_the_power.txt"
+    },
+    {
+        "name": "Test",
+        "filename": "12-test.txt"
     }
 ]
