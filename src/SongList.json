@@ -1,50 +1,30 @@
 [
     {
-        "name": "God is for Us",
-        "filename": "1-god_is_for_us.txt"
+        "name": "This is Amazing Grace",
+        "filename": "1-this_is_amazing_grace.txt"
     },
     {
-        "name": "Come People of the Risen King",
-        "filename": "2-come_people_of_the_risen_king.txt"
+        "name": "King of Kings",
+        "filename": "2-king_of_kings.txt"
     },
     {
-        "name": "O Church Arise",
-        "filename": "3-o_church_arise.txt"
+        "name": "His Mercy is More",
+        "filename": "3-his_mercy_is_more.txt"
     },
     {
-        "name": "Never Cease To Praise",
-        "filename": "4-never_cease_to_praise.txt"
+        "name": "Living Hope",
+        "filename": "4-living_hope.txt"
     },
     {
-        "name": "Praise Adonai",
-        "filename": "5-praise_adonai.txt"
+        "name": "Christ our Hope in Life and Death",
+        "filename": "5-christ_our_hope_in_life_and_death.txt"
     },
     {
-        "name": "Holy is our God",
-        "filename": "6-holy_is_our_god.txt"
+        "name": "In Christ Alone",
+        "filename": "6-in_christ_alone.txt"
     },
     {
-        "name": "O Lord, My Rock and My Redeemer",
-        "filename": "7-o_lord_my_rock_and_my_redeemer.txt"
-    },
-    {
-        "name": "Christ Is Risen, He Is Risen Indeed",
-        "filename": "8-christ_is_risen_he's_risen_indeed.txt"
-    },
-    {
-        "name": "How great thou art",
-        "filename": "9-how_great_thou_art.txt"
-    },
-    {
-        "name": "Rejoice the Lord is king",
-        "filename": "10-rejoice_the_lord_is_king.txt"
-    },
-    {
-        "name": "All hail the power",
-        "filename": "11-all_hail_the_power.txt"
-    },
-    {
-        "name": "Test",
-        "filename": "12-test.txt"
+        "name": "Because He Lives",
+        "filename": "7-because_he_lives.txt"
     }
 ]

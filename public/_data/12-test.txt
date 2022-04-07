@@ -1,7 +1,0 @@
-# TEST
-
-> KEY: F 
-> TEMPO: 110 bpm
-
-[Intro:]
-{F    D#M7  D/A#}
