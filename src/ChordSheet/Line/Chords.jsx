@@ -2,7 +2,7 @@ import React from "react";
 
 const Chords = ({ line, transposeOffset }) => {
     let displayText;
-    const cleanedText = line.replaceAll('{', '').replaceAll('}', '');
+    const cleanedText = line.replaceAll('{', '').replaceAll('}', '').trim();
     const notes = ['A', 'A#', 'B', 'C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#'];
 
     const getTransposedText = (text) => {
