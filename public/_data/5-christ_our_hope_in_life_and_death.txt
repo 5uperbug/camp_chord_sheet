@@ -4,7 +4,7 @@
 > TEMPO:  BPM
 
 [Interlude]
-{F     A#}
+{F     A#} 
 
 [Verse 1]
             F       Fsus     F
@@ -79,7 +79,7 @@ Everlasting life with Him
 There we will rise to meet the Lord
              Gm7       F/A   A#
 Then sin and death will be destroyed
-            F/C      A/Db   Dm
+            F/C      A/C#   Dm
 And we will feast in endless joy
      A#        F/C     C   F   Fsus   F
 When Christ is ours forevermore

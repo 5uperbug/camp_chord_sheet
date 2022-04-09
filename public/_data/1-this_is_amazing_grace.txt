@@ -3,6 +3,8 @@
 > KEY: G
 > TEMPO:  BPM
 
+`Dania: synph synth`
+
 [Intro]
 {G    C}
 

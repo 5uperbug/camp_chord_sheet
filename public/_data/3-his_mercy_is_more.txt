@@ -3,16 +3,9 @@
 > KEY: E
 > TEMPO:  BPM
 
-`Only keys`
-[Chorus]
-           A  E C#m   B        A  E  B
-Praise the Lord,  His mercy is more
-A             E         B         C#m    
-Stronger than darkness, new every morn
-    A             E         B        E
-Our sins they are many, His mercy is more
+`Dania: room strings`
 
-[Interlude]
+[Intro]
 {E    A}
 
 [Verse 1]
@@ -51,6 +44,8 @@ Stronger than darkness, new every morn
     A             E         B        E
 Our sins they are many, His mercy is more
 
+[Solo]
+
 [Verse 3]
      E         G#m         A           E
 What riches of kindness He lavished on us
@@ -71,7 +66,8 @@ Our sins they are many, His mercy is more
 `Drums only`
            A  E C#m   B        A  E  B
 Praise the Lord,  His mercy is more
-A             E         G#m7      C#m    
+`Full band`
+A             E         G#7      C#m    
 Stronger than darkness, new every morn
     A             E         B        C#m
 Our sins they are many, His mercy is more

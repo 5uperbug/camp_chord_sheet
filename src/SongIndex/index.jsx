@@ -38,7 +38,7 @@ const SongIndex = ({ list }) => {
         <Container>
             <Row className="mt-5">
                 <Col>
-                    <h3>Camp Song Index</h3>
+                    <h3>Song Index</h3>
                 </Col>
             </Row>
             <Row className="mt-3">
