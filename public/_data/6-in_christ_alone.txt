@@ -4,7 +4,7 @@
 > TEMPO:  BPM
 
 [Intro]
-{D    G    Bm    G }
+{D    G    Bm    G}
 
 [Verse 1]
           D        Bm7      A      

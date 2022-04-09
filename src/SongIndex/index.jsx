@@ -6,7 +6,7 @@ import ChordSheet from "../ChordSheet";
 const SongIndex = ({ list }) => {
     const [selectedSong, setSelectedSong] = useState(null);
     const [show, setShow] = useState(false);
-    const [fontSize, setFontSize] = useState(16);
+    const [fontSize, setFontSize] = useState(20);
     const [transposeOffset, setTransposeOffset] = useState(0);
 
     const handleClose = () => setShow(false);
@@ -68,7 +68,7 @@ const SongIndex = ({ list }) => {
                         <Modal.Footer className="justify-content-between">
                             <div className="btn-group" role="group">
                                 <button type="button" className="btn btn-dark" onClick={() => handleTranspose(transposeOffset - 1)}>-</button>
-                                <button type="button" className="btn btn-dark" style={{ pointerEvents: 'none' }}>
+                                <button type="button" className="btn btn-dark" onDoubleClick={() => handleTranspose(0)}>
                                     TRANSPOSE&nbsp;
                                     {transposeOffset !== 0 && <sup>[{transposeOffset}]</sup>}
                                 </button>
