@@ -3,7 +3,7 @@
 > KEY: E
 > TEMPO:  BPM
 
-`Dania: room strings`
+`Dania: single room strings`
 
 [Intro]
 {E    A}
@@ -18,13 +18,8 @@ Thrown into a sea, without bottom or shore
     A             E         B        A
 Our sins they are many, His mercy is more
 
-[Chorus]
-           A  E C#m   B        A  E  B
-Praise the Lord,  His mercy is more
-A             E         B         C#m    
-Stronger than darkness, new every morn
-    A             E         B        E
-Our sins they are many, His mercy is more
+[Interlude]
+{E    A}
 
 [Verse 2]
      E          G#m            A          E
@@ -44,7 +39,13 @@ Stronger than darkness, new every morn
     A             E         B        E
 Our sins they are many, His mercy is more
 
+[Interlude]
+{E    A}
+
 [Solo]
+{E F#m G#m A     G#m}
+{A G#m}
+{B}
 
 [Verse 3]
      E         G#m         A           E
@@ -75,4 +76,4 @@ Our sins they are many, His mercy is more
 Our sins they are many, His mercy is more
 
 [Outro]
-{E    A x4}
+{E    A x2}

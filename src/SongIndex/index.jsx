@@ -1,16 +1,36 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { Container, Row, Col, Modal } from "react-bootstrap";
+import { FaStop, FaPlay } from "react-icons/fa";
 
 import ChordSheet from "../ChordSheet";
 
 const SongIndex = ({ list }) => {
     const [selectedSong, setSelectedSong] = useState(null);
     const [show, setShow] = useState(false);
-    const [fontSize, setFontSize] = useState(20);
+    const [fontSize, setFontSize] = useState(28);
     const [transposeOffset, setTransposeOffset] = useState(0);
+    const [autoScrollEnabled, setAutoScrollEnabled] = useState(false);
+    const [scrollSpeed, setScrollSpeed] = useState(1);
+    const [scrollIntervalId, setScrollIntervalId] = useState();
+    const lyricWindow = useRef();
 
-    const handleClose = () => setShow(false);
+
+    useEffect(() => {
+        return () => {
+            scrollIntervalId && clearInterval(scrollIntervalId);
+        };
+    });
+
+    const reset = () => {
+        scrollIntervalId && clearInterval(scrollIntervalId);
+        setTransposeOffset(0);
+        setShow(false);
+        setAutoScrollEnabled(false);
+        setScrollSpeed(1);
+    };
+
     const handleShow = () => setShow(true);
+    const handleClose = () => reset();
 
     const showSong = (song) => {
         setSelectedSong(song);
@@ -31,8 +51,39 @@ const SongIndex = ({ list }) => {
     };
 
     const handleTranspose = (offset) => {
+        setAutoScrollEnabled(false);
         setTransposeOffset(offset % 12);
     };
+
+    const handleAutoScrollClicked = () => {
+        let intervalId;
+
+        if (!autoScrollEnabled) {
+            setAutoScrollEnabled(true);
+
+            intervalId = setInterval(() => {
+                lyricWindow.current.scrollBy(0, 1 * scrollSpeed);
+            }, 100);
+
+            setScrollIntervalId(intervalId);
+        } else {
+            setAutoScrollEnabled(false);
+            scrollIntervalId && clearInterval(scrollIntervalId);
+        }
+    };
+
+    const handleScrollSpeedClicked = (direction) => {
+        if (direction === '+') {
+            setScrollSpeed(scrollSpeed + 0.2);
+        } else if (direction === '-' && scrollSpeed > 0.7) {
+            setScrollSpeed(scrollSpeed - 0.2);
+        }
+    }
+
+    const handleFontSizeClicked = (offset) => {
+        setAutoScrollEnabled(false);
+        setFontSize(fontSize + offset)
+    }
 
     return (
         <Container>
@@ -55,7 +106,7 @@ const SongIndex = ({ list }) => {
                                 {selectedSong && selectedSong.name}
                             </Modal.Title>
                         </Modal.Header>
-                        <Modal.Body>
+                        <Modal.Body ref={lyricWindow}>
                             {
                                 selectedSong &&
                                 <ChordSheet
@@ -66,6 +117,7 @@ const SongIndex = ({ list }) => {
                             }
                         </Modal.Body>
                         <Modal.Footer className="justify-content-between">
+                            {/* TRANSPOSE CONTROLS */}
                             <div className="btn-group" role="group">
                                 <button type="button" className="btn btn-dark" onClick={() => handleTranspose(transposeOffset - 1)}>-</button>
                                 <button type="button" className="btn btn-dark" onDoubleClick={() => handleTranspose(0)}>
@@ -74,10 +126,39 @@ const SongIndex = ({ list }) => {
                                 </button>
                                 <button type="button" className="btn btn-dark" onClick={() => handleTranspose(transposeOffset + 1)}>+</button>
                             </div>
+
+                            {/* AUTOSCROLL CONTROLS */}
                             <div className="btn-group" role="group">
-                                <button type="button" className="btn btn-dark" onClick={() => setFontSize(fontSize - 1)}>-</button>
+                                <button type="button"
+                                    className={`btn ${autoScrollEnabled ? 'btn-outline-success' : 'btn-outline-dark'}`}
+                                    onClick={() => handleScrollSpeedClicked('-')}
+                                    disabled={autoScrollEnabled}
+                                >
+                                    <span>-</span>
+                                </button>
+                                <button
+                                    type="button"
+                                    className={`btn ${autoScrollEnabled ? 'btn-outline-success' : 'btn-outline-dark'}`}
+                                    onClick={handleAutoScrollClicked}
+                                >
+                                    <span className="align-text-bottom">{autoScrollEnabled ? <FaStop /> : <FaPlay />}</span>
+                                    <span>&nbsp;Autoscroll&nbsp;</span>
+                                    <span><sup>{scrollSpeed.toFixed(1)}x</sup></span>
+                                </button>
+                                <button type="button"
+                                    className={`btn ${autoScrollEnabled ? 'btn-outline-success' : 'btn-outline-dark'}`}
+                                    onClick={() => handleScrollSpeedClicked('+')}
+                                    disabled={autoScrollEnabled}
+                                >
+                                    <span>+</span>
+                                </button>
+                            </div>
+
+                            {/* FONT SIZE CONTROLS */}
+                            <div className="btn-group" role="group">
+                                <button type="button" className="btn btn-dark" onClick={() => handleFontSizeClicked(-1)}>-</button>
                                 <button type="button" className="btn btn-dark" style={{ pointerEvents: 'none' }}>FONT</button>
-                                <button type="button" className="btn btn-dark" onClick={() => setFontSize(fontSize + 1)}>+</button>
+                                <button type="button" className="btn btn-dark" onClick={() => handleFontSizeClicked(+1)}>+</button>
                             </div>
                         </Modal.Footer>
                     </Modal>

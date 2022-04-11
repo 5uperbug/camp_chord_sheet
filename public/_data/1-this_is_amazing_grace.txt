@@ -1,7 +1,7 @@
 # This Is Amazing Grace
 
 > KEY: G
-> TEMPO:  BPM
+> TEMPO:  96
 
 `Dania: synph synth`
 
