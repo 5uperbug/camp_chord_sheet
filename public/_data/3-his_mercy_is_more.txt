@@ -3,7 +3,7 @@
 > KEY: E
 > TEMPO:  BPM
 
-`Dania: single room strings`
+
 
 [Intro]
 {E    A}
@@ -53,7 +53,8 @@ What riches of kindness He lavished on us
     B             C#m      A                B
 His blood was the payment, His life was the cost
    E              F#m           G#m     A
-We stood 'neath a debt we could never afford
+We stood 'neath a debt we could never afford 
+`long pause`
     A             E         B        A
 Our sins they are many, His mercy is more
 

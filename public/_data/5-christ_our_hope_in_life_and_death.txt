@@ -3,7 +3,7 @@
 > KEY: F
 > TEMPO:  BPM
 
-[Interlude]
+[Intro]
 {F     A#    Dm   Gm} 
 
 [Verse 1]
@@ -91,6 +91,22 @@ O sing hallelujah
 Our hope springs eternal
 F/A  A#       F/A
  O  sing hallelujah
+A#     F/A   C     A#
+Now and ever we confess
+           Dm7     C        F
+Christ our hope in life and death
+`break`
+
+  Dm   A#   F
+O sing hallelujah
+    C/E           Dm
+Our hope springs eternal
+F/A  A#       F/A
+ O  sing hallelujah
+A#     F/A   C     A#
+Now and ever we confess
+           Dm7     C        F
+Christ our hope in life and death
 A#     F/A   C     A#
 Now and ever we confess
            Dm7     C        F

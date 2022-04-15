@@ -1,6 +1,6 @@
 # King of Kings
 
-> KEY: D
+> KEY: E
 > TEMPO:  BPM
 
 [Intro]

@@ -1,6 +1,6 @@
 # Because He Lives
 
-> KEY: G
+> KEY: A
 > TEMPO:  BPM
 
 [Verse 1]
@@ -52,8 +52,8 @@ D               G
 Just because He lives!
 
 [Interlude]
-{G  C   G/B    B} 
-{G  Am  G/B    C   Am}
+{G  C   G/B   D}
+{Em  Bm    C   Am}
 {G  D   G}
 
 [Chorus]
@@ -78,12 +78,9 @@ Because I know He holds the future,
             G
 And life is worth the living, 
 D               G
-Just because He lives!   (x2)
+Just because He lives! 
  
 
-[Outro]
-          G                 Gsus4   
-Because I know He holds the future,
             G
 And life is worth the living, 
 D7              Am7    Cm7   G
