@@ -4,7 +4,7 @@
 > TEMPO:  BPM
 
 [Interlude]
-{F     A#} 
+{F     A#    Dm   Gm} 
 
 [Verse 1]
             F       Fsus     F
